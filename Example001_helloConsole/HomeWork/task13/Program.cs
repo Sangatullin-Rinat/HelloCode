@@ -1,19 +1,20 @@
 // Задача 13: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
 
-Console.Write("Введите трехзначное число - ");
-long number = Convert.ToInt64(Console.ReadLine());
-if (number < 0)
-{
-    number = -number;
+void hasThirdNumber(int x) {
+int div = 1;
+while (x / div >= 10) {
+div *= 10;
 }
 
-if (number < 100)
-{
-    Console.WriteLine("нет третьей цифры");
+if (div < 100) {
+    Console.WriteLine("Too little number");
+} else {
+    // last number of x / (div/100)    123456
+    int digit = (x / (div/100)) % 10;
+    Console.WriteLine("Third is {0}", digit);
 }
-else
-{
-    number = number / 100;
-    Console.WriteLine(number % 1);
 }
+
+hasThirdNumber(12);
+hasThirdNumber(123);
