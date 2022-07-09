@@ -3,7 +3,7 @@
 // 2, 4 -> 16
 Console.WriteLine($"Задача 25. Возведене числа A в натуральную степень B");
 
-int exp (int numberA, int numberB){
+int exponentacion (int numberA, int numberB){
   int result = 1;
   for(int i=1; i <= numberB; i++){
     result = result * numberA;
@@ -17,5 +17,5 @@ int exp (int numberA, int numberB){
   Console.Write("Введите число B: ");
   int numberB = Convert.ToInt32(Console.ReadLine());
 
-  int exp = exp (numberA, numberB);
-  Console.WriteLine("Ответ: " + exp);
+  int xponentacion = exponentacion (numberA, numberB);
+  Console.WriteLine("Ответ: " + exponentacion);
