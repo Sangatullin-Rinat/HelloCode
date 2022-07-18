@@ -3,6 +3,7 @@
 Console.WriteLine("Enter X and Y");
 int X = Convert.ToInt32(Console.ReadLine());
 int Y = Convert.ToInt32(Console.ReadLine());   
+Console.Write("\n");
 
 
 int[,] array = new int [X,Y]; 
@@ -16,6 +17,7 @@ for (int i = 0; i < X; i++) {
         Console.Write(array[i,j]+ " ");
      }
     Console.WriteLine();
+    Console.Write("\n");
 }
 for (int j = 0; j < Y; j++) {
     double sum = 0;
@@ -23,4 +25,5 @@ for (int j = 0; j < Y; j++) {
         sum += array[i, j];
     }
      Console.WriteLine("sum is {0}", sum / X);
+     Console.Write("\n");
 }
