@@ -34,12 +34,16 @@ int firstIndexOf2Element, int secondIndexOf2Element)
         twoDimensionIntArray[firstIndexOf1Element, secondIndexOf1Element] = twoDimensionIntArray[firstIndexOf2Element, secondIndexOf2Element];
         twoDimensionIntArray[firstIndexOf2Element, secondIndexOf2Element] = tempValue;
 }
-
-Console.WriteLine("Програма генерирует таблицу.");
+Console.Write("\n");
+Console.WriteLine("Програма генерирует таблицу.......");
+Console.Write("\n");
 int[,] twoDimensionArray = new int[new Random().Next(2, 11), new Random().Next(3, 11)];
 FillIntTable(twoDimensionArray, -88, 101);
+Console.Write("\n");
 Console.WriteLine("Сгенерирован следующий массив:");
+Console.Write("\n");
 PrintIntTable(twoDimensionArray);
+
 
 int indexOfCurrentMax = 0;
 int indexOfCurrentMin = 0;
@@ -61,4 +65,4 @@ for (int i = 0; i < twoDimensionArray.GetLength(0); i++)
         SwapElementsIn2DIntArray(twoDimensionArray,i,indexOfCurrentMin,i,j);
     }
 }
-
+Console.Write("\n");
